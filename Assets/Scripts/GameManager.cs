@@ -99,17 +99,24 @@ public class GameManager : MonoBehaviour
 
     public void NoteHit()
     {
-        scoreText.text = "Score: " + currScore.ToString();
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + currScore.ToString();
+        }
 
         totalNotes++;
 
         currCombo++;
-        comboText.text = "Combo: " + currCombo.ToString();
 
-        Destroy(GameObject.Find("Miss(Clone)"));
-        Destroy(GameObject.Find("Perfect(Clone)"));
-        Destroy(GameObject.Find("Normal(Clone)"));
-        Destroy(GameObject.Find("Good(Clone)"));
+        if (comboText != null)
+        {
+            comboText.text = "Combo: " + currCombo.ToString();
+        }
+
+            Destroy(GameObject.Find("Miss(Clone)"));
+            Destroy(GameObject.Find("Perfect(Clone)"));
+            Destroy(GameObject.Find("Normal(Clone)"));
+            Destroy(GameObject.Find("Good(Clone)"));
     }
 
     public void NormalHit()
