@@ -10987,7 +10987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNames: {fileID: 0}
   playerScores: {fileID: 0}
-  leaderboardKey: MagicalHard
+  leaderboardKey: MagicalNormal
 --- !u!4 &646164351
 Transform:
   m_ObjectHideFlags: 0
