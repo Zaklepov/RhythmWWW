@@ -32580,6 +32580,7 @@ MonoBehaviour:
   finalScoreTXT: {fileID: 949076155}
   Results: {fileID: 1144019966}
   leaderboard: {fileID: 646164350}
+  damn: 0
 --- !u!4 &1861539199
 Transform:
   m_ObjectHideFlags: 0

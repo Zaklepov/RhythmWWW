@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject Results;
     public LeaderboardManager leaderboard;
+    public int damn = 0;
 
     void Start()
     {
@@ -72,7 +73,11 @@ public class GameManager : MonoBehaviour
         else if (CurrTime > TimeForEnd)
         {
             Results.SetActive(true);
-            StartCoroutine(ReturnScore());
+            if (damn != 1)
+            {
+                StartCoroutine(ReturnScore());
+                damn = 1;
+            }
             totalNotesTXT.text = totalNotes.ToString();
             normalNotesTXT.text = normalNotes.ToString();
             goodNotesTXT.text = goodNotes.ToString();
@@ -174,6 +179,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ReturnScore()
     {
-        yield return leaderboard.SubmitScoreRoutine(currScore);
+       yield return leaderboard.SubmitScoreRoutine(currScore);
     }
 }
